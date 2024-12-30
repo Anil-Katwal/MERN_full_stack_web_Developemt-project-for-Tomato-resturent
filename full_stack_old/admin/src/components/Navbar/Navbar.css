@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Corrected to justify-content */
+    align-items: center;
+    padding: 8px 4%;
+    background-color: #f8f9fa;
+    /* Light background color for better visual appeal */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.navbar .logo {
+    width: max(10%, 80px);
+    /* Ensures a minimum width of 80px and scales with viewport */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.navbar .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Circular profile picture */
+    overflow: hidden;
+    /* Ensures the image stays within the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .profile img {
+    width: 100%;
+    /* Ensure the image fills the container */
+    height: auto;
+}

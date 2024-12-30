@@ -1,0 +1,56 @@
+/* List.css */
+
+/* Container styling */
+.list {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.list p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Flex column layout */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Table container styling */
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table header styling */
+.list-table-format.title {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+/* Table row styling */
+.list-table-format {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Ensure this is in List.css */
+.list-table-format img {
+    max-width: 100px;
+    max-height: 60px;
+    object-fit: cover;
+}
+
+.list-table-format p {
+    margin: 0;
+    padding: 0 10px;
+}

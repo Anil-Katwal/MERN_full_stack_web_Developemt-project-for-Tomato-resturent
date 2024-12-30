@@ -1,0 +1,277 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+
+\title{Data Structures and Algorithms}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Data Structures}
+
+\subsection{Arrays}
+\begin{itemize}
+    \item \textbf{Definition}: A collection of elements identified by index or key.
+    \item \textbf{Types}: Static (fixed size) and Dynamic (resizable).
+    \item \textbf{Operations}: Insertion, Deletion, Access (O(1) for access by index).
+\end{itemize}
+
+\subsection{Linked Lists}
+\begin{itemize}
+    \item \textbf{Definition}: A linear collection of elements called nodes, where each node points to the next.
+    \item \textbf{Types}: Singly Linked List, Doubly Linked List, Circular Linked List.
+    \item \textbf{Operations}: Insertion, Deletion (O(1) if the node is known), Traversal (O(n)).
+\end{itemize}
+
+\subsection{Stacks}
+\begin{itemize}
+    \item \textbf{Definition}: A linear data structure that follows the Last In First Out (LIFO) principle.
+    \item \textbf{Operations}: Push (insert), Pop (remove), Peek (top element).
+\end{itemize}
+
+\subsection{Queues}
+\begin{itemize}
+    \item \textbf{Definition}: A linear data structure that follows the First In First Out (FIFO) principle.
+    \item \textbf{Types}: Simple Queue, Circular Queue, Priority Queue, Deque.
+    \item \textbf{Operations}: Enqueue (insert), Dequeue (remove), Peek (front element).
+\end{itemize}
+
+\subsection{Hash Tables}
+\begin{itemize}
+    \item \textbf{Definition}: A data structure that stores key-value pairs for efficient retrieval.
+    \item \textbf{Operations}: Insertion, Deletion, Search (average O(1)).
+\end{itemize}
+
+\subsection{Trees}
+\begin{itemize}
+    \item \textbf{Definition}: A hierarchical data structure with a root node and child nodes forming a parent-child relationship.
+    \item \textbf{Types}: Binary Tree, Binary Search Tree (BST), AVL Tree, Red-Black Tree, B-Trees, Heaps.
+    \item \textbf{Operations}: Insertion, Deletion, Traversal (Inorder, Preorder, Postorder).
+\end{itemize}
+
+\subsection{Graphs}
+\begin{itemize}
+    \item \textbf{Definition}: A collection of nodes (vertices) connected by edges.
+    \item \textbf{Types}: Directed, Undirected, Weighted, Unweighted.
+    \item \textbf{Representations}: Adjacency Matrix, Adjacency List.
+    \item \textbf{Operations}: Traversal (DFS, BFS), Shortest Path (Dijkstra’s, Bellman-Ford), Minimum Spanning Tree (Kruskal’s, Prim’s).
+\end{itemize}
+
+\section{Algorithms}
+
+\subsection{Sorting Algorithms}
+\begin{itemize}
+    \item \textbf{Bubble Sort}: Simple but inefficient. $O(n^2)$.
+    \item \textbf{Selection Sort}: Selects the minimum element and swaps. $O(n^2)$.
+    \item \textbf{Insertion Sort}: Builds the final sorted array one item at a time. $O(n^2)$.
+    \item \textbf{Merge Sort}: Divide and conquer approach. $O(n \log n)$.
+    \item \textbf{Quick Sort}: Divide and conquer approach, with a pivot element. Average $O(n \log n)$.
+    \item \textbf{Heap Sort}: Utilizes a binary heap data structure. $O(n \log n)$.
+\end{itemize}
+
+\subsection{Searching Algorithms}
+\begin{itemize}
+    \item \textbf{Linear Search}: Sequentially checks each element. $O(n)$.
+    \item \textbf{Binary Search}: Requires sorted array, divides the array in half. $O(\log n)$.
+\end{itemize}
+
+\subsection{Dynamic Programming}
+\begin{itemize}
+    \item \textbf{Definition}: Solves complex problems by breaking them down into simpler subproblems and storing the results of subproblems to avoid redundant computing.
+    \item \textbf{Examples}: Fibonacci Sequence, Knapsack Problem, Longest Common Subsequence.
+\end{itemize}
+
+\subsection{Greedy Algorithms}
+\begin{itemize}
+    \item \textbf{Definition}: Builds up a solution piece by piece, always choosing the next piece that offers the most immediate benefit.
+    \item \textbf{Examples}: Coin Change Problem, Activity Selection, Huffman Coding.
+\end{itemize}
+
+\subsection{Divide and Conquer}
+\begin{itemize}
+    \item \textbf{Definition}: Breaks a problem into smaller subproblems, solves them independently, and combines their solutions to solve the original problem.
+    \item \textbf{Examples}: Merge Sort, Quick Sort, Binary Search.
+\end{itemize}
+
+\subsection{Backtracking}
+\begin{itemize}
+    \item \textbf{Definition}: Builds a solution incrementally and removes those solutions that fail to satisfy the constraints of the problem.
+    \item \textbf{Examples}: N-Queens Problem, Sudoku Solver, Hamiltonian Path.
+\end{itemize}
+
+\subsection{Graph Algorithms}
+\begin{itemize}
+    \item \textbf{Depth First Search (DFS)}: Explores as far as possible along each branch before backtracking. $O(V + E)$.
+    \item \textbf{Breadth First Search (BFS)}: Explores all neighbors at the present depth before moving on to nodes at the next depth level. $O(V + E)$.
+    \item \textbf{Dijkstra’s Algorithm}: Finds the shortest path from a source node to all other nodes in a weighted graph. $O(V^2)$ or $O(E + V \log V)$ with a priority queue.
+    \item \textbf{Bellman-Ford Algorithm}: Computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph. $O(VE)$.
+    \item \textbf{Kruskal’s Algorithm}: Finds the minimum spanning tree for a connected, weighted graph. $O(E \log E)$.
+    \item \textbf{Prim’s Algorithm}: Finds the minimum spanning tree for a connected, weighted graph. $O(V^2)$ or $O(E + V \log V)$ with a priority queue.
+\end{itemize}
+
+\section{Additional Concepts}
+
+\subsection{Big O Notation}
+\begin{itemize}
+    \item \textbf{Definition}: Describes the upper bound of the time complexity or space complexity of an algorithm.
+    \item \textbf{Common Complexities}: $O(1)$, $O(\log n)$, $O(n)$, $O(n \log n)$, $O(n^2)$, $O(2^n)$, $O(n!)$.
+\end{itemize}
+
+\subsection{Recursion}
+\begin{itemize}
+    \item \textbf{Definition}: A function calls itself as a subroutine.
+    \item \textbf{Base Case and Recursive Case}: Essential to prevent infinite loops.
+\end{itemize}
+
+\subsection{Amortized Analysis}
+\begin{itemize}
+    \item \textbf{Definition}: Average time per operation over a sequence of operations, spread out over time.
+\end{itemize}
+
+\subsection{Space Complexity}
+\begin{itemize}
+    \item \textbf{Definition}: The amount of memory an algorithm needs to run to completion.
+\end{itemize}
+\section{Linear Data Structures}
+
+A linear data structure is a type of data structure in which elements are arranged sequentially, and each element is connected to its previous and next elements. Because of this arrangement, linear data structures are easy to implement and understand.
+
+\subsection{Types of Linear Data Structures}
+
+\subsubsection{Arrays}
+\begin{itemize}
+    \item \textbf{Definition}: A collection of elements identified by index or key.
+    \item \textbf{Operations}: Insertion, deletion, access.
+    \item \textbf{Example}: An array of integers: $[1, 2, 3, 4, 5]$.
+\end{itemize}
+
+\subsubsection{Linked Lists}
+\begin{itemize}
+    \item \textbf{Definition}: A collection of nodes where each node contains a data part and a reference (or link) to the next node in the sequence.
+    \item \textbf{Types}: Singly linked list, doubly linked list, circular linked list.
+    \item \textbf{Example}: A singly linked list with three nodes containing values 1, 2, and 3:
+    \begin{verbatim}
+    [1] -> [2] -> [3] -> NULL
+    \end{verbatim}
+\end{itemize}
+
+\subsubsection{Stacks}
+\begin{itemize}
+    \item \textbf{Definition}: A linear data structure that follows the Last In First Out (LIFO) principle.
+    \item \textbf{Operations}: Push (insert), pop (remove), peek (view top element).
+    \item \textbf{Example}: A stack of books where you can only take the top book off the stack.
+\end{itemize}
+
+\subsubsection{Queues}
+\begin{itemize}
+    \item \textbf{Definition}: A linear data structure that follows the First In First Out (FIFO) principle.
+    \item \textbf{Types}: Simple queue, circular queue, priority queue, deque.
+    \item \textbf{Operations}: Enqueue (insert), dequeue (remove), peek (view front element).
+    \item \textbf{Example}: A line of people waiting to buy tickets where the first person in line is the first to buy a ticket.
+\end{itemize}
+
+\section{Concepts of LIFO and FIFO}
+
+\subsection{LIFO (Last In First Out)}
+
+LIFO is a principle where the last element added to a structure is the first one to be removed. This principle is primarily used in stacks.
+
+\begin{itemize}
+    \item \textbf{Example}: Think of a stack of plates. You can only take the top plate off the stack, and the last plate added is the first one to be removed.
+\end{itemize}
+
+\begin{verbatim}
+Stack:
+Top -> Plate 3
+       Plate 2
+       Plate 1
+\end{verbatim}
+
+\begin{itemize}
+    \item \textbf{Push}: Adding a plate to the stack (Push Plate 4).
+    \item \textbf{Pop}: Removing the top plate from the stack (Pop Plate 4).
+\end{itemize}
+
+\subsection{FIFO (First In First Out)}
+
+FIFO is a principle where the first element added to a structure is the first one to be removed. This principle is primarily used in queues.
+
+\begin{itemize}
+    \item \textbf{Example}: Think of a queue of people at a ticket counter. The person who arrives first gets served first.
+\end{itemize}
+
+\begin{verbatim}
+Queue:
+Front -> Person 1
+         Person 2
+         Person 3 -> Rear
+\end{verbatim}
+
+\begin{itemize}
+    \item \textbf{Enqueue}: Adding a person to the end of the queue (Enqueue Person 4).
+    \item \textbf{Dequeue}: Removing the person at the front of the queue (Dequeue Person 1).
+\end{itemize}
+
+\section{Examples in Code}
+
+\subsection{Stack (LIFO)}
+
+\begin{lstlisting}[language=Python, caption=Stack implementation using a list]
+# Stack implementation using a list
+stack = []
+
+# Push operation
+stack.append(1)
+stack.append(2)
+stack.append(3)
+
+print("Stack after pushes:", stack)
+
+# Pop operation
+top_element = stack.pop()
+print("Popped element:", top_element)
+print("Stack after pop:", stack)
+\end{lstlisting}
+
+\textbf{Output}:
+\begin{verbatim}
+Stack after pushes: [1, 2, 3]
+Popped element: 3
+Stack after pop: [1, 2]
+\end{verbatim}
+
+\subsection{Queue (FIFO)}
+
+\begin{lstlisting}[language=Python, caption=Queue implementation using a list]
+# Queue implementation using a list
+from collections import deque
+
+queue = deque()
+
+# Enqueue operation
+queue.append(1)
+queue.append(2)
+queue.append(3)
+
+print("Queue after enqueues:", list(queue))
+
+# Dequeue operation
+front_element = queue.popleft()
+print("Dequeued element:", front_element)
+print("Queue after dequeue:", list(queue))
+\end{lstlisting}
+
+\textbf{Output}:
+\begin{verbatim}
+Queue after enqueues: [1, 2, 3]
+Dequeued element: 1
+Queue after dequeue: [2, 3]
+\end{verbatim}
+
+\end{document}

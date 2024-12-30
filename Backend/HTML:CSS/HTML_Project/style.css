@@ -1,0 +1,28 @@
+body{
+    margin:0;
+    height:100vh;
+    background-color: rgb(197, 190, 190);
+}
+span{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    background:url( "https: //www.google.com/url?sa=i&url=https%3A%2F%2Fwww.farmanddairy.com%2Fcolumns%2Fsmall-birds-make-very-interesting-feeders%2F469481.html&psig=AOvVaw0qzMAG2WC9lYo8ip43ul4a&ust=1715724435848000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjwz-HRi4YDFQAAAAAdAAAAABAE");
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    animation: animate 6s linear;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+        filter:hue-rotate(720deg);
+    }
+    100%{
+        transform:translate(-50%,-5000%);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,8 @@
+.heardtop {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 20px;            /* Padding around the text */
+    text-align: center;       /* Centered text */
+    font-size: 24px;          /* Larger font size */
+    font-weight: bold;        /* Bold text */
+    border-bottom: 1px solid #dee2e6; /* Light grey border at the bottom */
+}
